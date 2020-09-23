@@ -19,6 +19,8 @@ body{
   Supply a fallback color of light grey (#DDDDDD) that will be used if the image isn’t available. */
   background-color: #DDDDDD;
   background-image: url('../images/pigeon-background.jpeg');
+  /* keep just one image */
+  background-repeat: no-repeat;
 }
 
 main{
@@ -51,14 +53,14 @@ a{
 }
 
 table{
-    /* 2px black border around the exterior (provided in starter code) */
-    border: 2px solid #000000;
-    /* 10px radius rounded exterior corners */
-    border-radius: 10px;
-    /* Should be centered on a large screen */
-    margin-left: auto;
-    margin-right: auto; 
-
+  /* 2px black border around the exterior (provided in starter code) */
+  border: 2px solid #000000;
+  /* 10px radius rounded exterior corners */
+  border-radius: 10px;
+  /* Should be centered on a large screen */
+  margin: 0 auto;
+  /* border-collapse: collapse; */
+  /* QQQQ */
 }
 
 /* Column headers are always at least 125px wide, with 10px of padding. Column header text is white, 
@@ -68,29 +70,27 @@ centered horizontally and vertically, and uppercase with a dark red background (
   color: #FFFFFF;
   min-width: 125px;
   padding: 10px;
-  text-align: center;
   vertical-align: middle;
   text-transform: uppercase;
-  /* overflow: hidden; */
-  /* QQQQQQQQ */
 }
 
 /* Row headers have a consistent 2px black border.  Only use the border property on the sides 
 that aren’t touching an existing border. (See picture.) */
 .rowhead{
-  border-width: 2px;
-  border-color: #000000;
-  border-collapse: collapse; 
-  /* QQQQQ */
+  /* border-color: #FF0000;
+  border-style: solid;
+  border-width: 2px; */
+  border-right: 2px solid #000000;
+  border-top: 2px solid #000000;
 }
 
 /* Table cells have centered text with a 2px black 
 border on only one side (the top), and 10px padding on all sides. */
-td,th{
+td{
   text-align: center;
   border-top: 2px solid #000000;
   padding: 10px;
-  vertical-align: middle;
+  /* vertical-align: middle; */
 }
 
 tr{
@@ -108,8 +108,6 @@ tbody tr:hover{
   background-color: rgba(126,8,48,.25);  
 }
 
-*{
-}
 
 /* Focused elements should have a 3px dashed border.  Use #417243 for the color. */
 *:focus{
@@ -118,7 +116,21 @@ tbody tr:hover{
   color:#417243;
 }
 
-thead tr:first-child th:first-child{}
+/* 10px radius rounded exterior corners **  HINT: You will need to round the corners of the table AND the corner cells. 
+How can you use pseudeoclasses to make sure the outer cells are rounded no matter how big the table is?   
+(You need extra code to make sure only the *outside* borders are rounded, not all of the cells.) */
+thead tr:first-child th:first-child{
+  border-top-left-radius: 10px;
+}
+thead tr:first-child th:last-child{
+  border-top-right-radius: 10px;
+}
+tbody tr:last-child th{
+  border-bottom-left-radius: 10px;
+}
+tbody tr:last-child td:last-child{
+  border-bottom-right-radius: 10px;
+}
 
 footer{
   width:100%;
@@ -130,5 +142,8 @@ footer{
   min-height: 75px;
   position: fixed;
   bottom: 0;
+  /* body has margin */
+  left: 0;
 }
+
 
