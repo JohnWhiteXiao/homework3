@@ -64,7 +64,7 @@ table{
 /* Column headers are always at least 125px wide, with 10px of padding. Column header text is white, 
 centered horizontally and vertically, and uppercase with a dark red background (#7e0820). */
 .colhead{
-  background-color: #7e0830;
+  background-color: #7e0820;
   color: #FFFFFF;
   min-width: 125px;
   padding: 10px;
@@ -79,6 +79,7 @@ centered horizontally and vertically, and uppercase with a dark red background (
 that aren’t touching an existing border. (See picture.) */
 .rowhead{
   border-width: 2px;
+  border-color: #000000;
   border-collapse: collapse; 
   /* QQQQQ */
 }
