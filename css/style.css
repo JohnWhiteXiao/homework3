@@ -98,7 +98,10 @@ tr{
 /* Every even numbered table row has a grey background (#D1D1D1)
 Every odd numbered table row has a transparent background. */
 tr:nth-child(even) {
-  background: #D1D1D1;
+  background-color: #D1D1D1;
+}
+tr:nth-child(odd) {
+  background: rgba(0,0,0,0);
 }
 
 /* tbody */
@@ -106,7 +109,7 @@ tr:nth-child(even) {
 /* Hovering over a row changes the same background color as the column header, 
 but with an opacity of .25.  HINT: Use rgb values and start with with rgb(126,8,48) */
 tr:hover{
-  background-color: rgba(126,8,48,.25);  
+  background: rgba(126,8,48,.25);  
 }
 
 
