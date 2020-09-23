@@ -18,7 +18,7 @@ body{
   /* Page background should use the provided jpg image as a centered, non-repeating background that takes up the entire page.  
   Supply a fallback color of light grey (#DDDDDD) that will be used if the image isn’t available. */
   background-color: #DDDDDD;
-  background-image: url('../images/pigeon-background.jpeg');
+  background-image: url('../images/pigeon-background.JPEG');
   /* keep just one image */
   background-repeat: no-repeat;
 }
@@ -59,8 +59,7 @@ table{
   border-radius: 10px;
   /* Should be centered on a large screen */
   margin: 0 auto;
-  /* border-collapse: collapse; */
-  /* QQQQ */
+  border-collapse: separate;
 }
 
 /* Column headers are always at least 125px wide, with 10px of padding. Column header text is white, 
@@ -98,13 +97,15 @@ tr{
 
 /* Every even numbered table row has a grey background (#D1D1D1)
 Every odd numbered table row has a transparent background. */
-tbody tr:nth-child(even) {
+tr:nth-child(even) {
   background: #D1D1D1;
 }
 
+/* tbody */
+
 /* Hovering over a row changes the same background color as the column header, 
 but with an opacity of .25.  HINT: Use rgb values and start with with rgb(126,8,48) */
-tbody tr:hover{
+tr:hover{
   background-color: rgba(126,8,48,.25);  
 }
 
