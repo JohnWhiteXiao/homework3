@@ -105,7 +105,7 @@ tr:nth-child(even) {
 /* Hovering over a row changes the same background color as the column header, 
 but with an opacity of .25.  HINT: Use rgb values and start with with rgb(126,8,48) */
 tr:hover{
-  background-color: rgba(126,8,48,.25);  
+  background-color: rgba(126,8,32,.25);  
 }
 
 
